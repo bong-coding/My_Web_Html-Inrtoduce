@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Story</title>
+  <link rel="stylesheet" href="./font.css">
+  <style>
+ /* 기본 설정 */
+body {
+  margin: 0;
+  background: linear-gradient(to bottom, #eef2ff, #f8fafc); /* 밝은 인디고 → 회백 그라데이션 */
+  font-family: 'Ownglyph_meetme-Rg', sans-serif;
+  color: #374151; /* slate-700 */
+  scroll-behavior: smooth;
+}
+
+/* 헤더 바 */
+header {
+  background-color: #ffffff;
+  padding: 16px 0;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* 네비게이션 메뉴 */
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* 네비게이션 메뉴 항목 */
+header nav a {
+  color: #6366f1; /* indigo-500 */
+  font-weight: 500;
+  text-decoration: none;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+  font-size: 16px;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s ease;
+}
+
+/* underline 애니메이션 */
+header nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0;
+  background-color: #6366f1;
+  transition: width 0.4s ease;
+}
+
+header nav a:hover::after {
+  width: 100%;
+}
+
+header nav a:hover {
+  color: #4f46e5; /* hover 시 텍스트 색도 함께 변화 */
+}
+
+
+/* 제목 */
+h1 {
+  text-align: center;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+  margin: 48px 0 12px;
+  font-size: 28px;
+  color: #1e293b; /* slate-800 */
+}
+
+/* 앵커 내비게이션 (중간 링크) */
+.anchor-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.anchor-nav a {
+  color: #14b8a6; /* teal-500 */
+  font-weight: bold;
+  margin: 0 10px;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.anchor-nav a:hover {
+  color: #0d9488; /* teal-600 */
+  text-decoration: underline;
+}
+
+/* 컨텐츠 카드 영역 */
+.section {
+  max-width: 720px;
+ 
+  margin: 32px auto;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+  animation: fadeSlide 0.8s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08);
+  background: #f3f4ff; /* very light indigo tone on hover */
+}
+
+.section h2 {
+  color: #334155; /* slate-700 */
+  font-size: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+  font-family: 'Ownglyph_ParkDaHyun', sans-serif;
+}
+
+.section p {
+  color: #475569; /* slate-600 */
+  text-align: center;
+  line-height: 1.8;
+  margin-top: 12px;
+  font-size: 16px;
+}
+
+/* 이미지 */
+.section img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+/* 상단으로 이동 링크 */
+.top-link {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  color: #3b82f6; /* blue-500 */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.top-link:hover {
+  color: #1d4ed8; /* blue-700 */
+}
+
+/* 등장 애니메이션 */
+@keyframes fadeSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="./index.html">Main</a>
+      <a href="./Resume.html">Resume</a>
+      <a href="./Story.html">Story</a>
+      <a href="#">Bucket</a>
+      <a href="#">Album</a>
+      <a href="#">Major</a>
+      <a href="#">Poster</a>
+      <a href="https://www.jbnu.ac.kr" target="_blank">JBNU</a>
+    </nav>
+  </header>
+
+  <h1 id="top">저의 이야기를 소개합니다.</h1>
+
+  <div class="anchor-nav">
+    <a href="#1">내 이름으로 삼행시</a> /
+    <a href="#2">숫자로 나를 소개</a> /
+    <a href="#3">여가시간의 활동</a> /
+    <a href="#4">좋아하는 사람</a>
+  </div>
+
+  <div class="section" id="1">
+    <h2>나의 이름으로 삼행시</h2>
+    <p>
+      이 : 이제는<br>
+      봉 : 봉민이가<br>
+      민 : 민영화할 시간
+    </p>
+    <img src="./pic/logo.png" alt="삼행시 이미지" />
+    <a href="#top" class="top-link">⬆ 이동</a>
+  </div>
+
+  <div class="section" id="2">
+    <h2>숫자로 나를 소개합니다</h2>
+    <p>
+      2 : 2제부터 시작이야<br>
+      27 : 27살 기준으로 나는 달라졌다<br>
+      49 : 사고 없이 달려가자
+    </p>
+    <img src="./pic/logo.png" alt="숫자 이미지" />
+    <a href="#top" class="top-link">⬆ 이동</a>
+  </div>
+
+  <div class="section" id="3">
+    <h2>나의 여가생활</h2>
+    <p>
+      여가시간엔 뉴스 보는 걸 좋아하고<br>
+      노래를 들으며 달리는 걸 좋아해요.
+    </p>
+    <img src="./pic/logo.png" alt="여가 이미지" />
+    <a href="#top" class="top-link">⬆ 이동</a>
+  </div>
+
+  <div class="section" id="4">
+    <h2>내가 좋아하는 그 사람</h2>
+    <p>
+      그 사람은 자신의 일에 책임감을 가지고 최선을 다해요.<br>
+      저는 그 모습에 감동받아 존경하게 되었어요.
+    </p>
+    <img src="./pic/logo.png" alt="사람 이미지" />
+    <a href="#top" class="top-link">⬆ 이동</a>
+  </div>
+
+</body>
+</html>

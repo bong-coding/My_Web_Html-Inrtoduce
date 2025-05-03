@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>봉의 개발일기</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @font-face {
+    font-family: 'q1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      height: 64px;
+      padding: 0 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #fff;
+      font-weight: 600;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    header p:hover {
+      color: #facc15;
+      transform: translateY(-2px);
+    }
+
+    header a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #eee;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #333;
+      color: #facc15;
+      transform: translateY(-2px);
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .hamburger {
+        display: block;
+      }
+      nav {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: #1a1a1a;
+        display: none;
+        padding: 12px 0;
+        align-items: center;
+      }
+      nav.active {
+        display: flex;
+      }
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      background: #f9f9f9;
+    }
+
+    table {
+      width: 100%;
+      max-width: 960px;
+      border-collapse: collapse;
+      background-color: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+    }
+    td:hover {
+  background-color: lightsteelblue;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* 부드러운 등장 */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 16px;
+      text-align: center;
+      
+    }
+    td{
+        font-family: 'q1';
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: 600;
+    }
+
+    td img {
+      width: 100px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    thead td {
+      background-color: #1a1a1a;
+      color: #eee;
+      font-size: 13px;
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: #aaa;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
+      border-top: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="/"><p>기찮은 과제</p></a>
+    <button class="hamburger">☰</button>
+    <nav id="nav-menu">
+      <a href="#">Home</a>
+      <a href="./Resume.html">Resume</a>
+      <a href="./Story.html">Story</a>
+      <a href="#">Bucket</a>
+      <a href="#">Album</a>
+      <a href="#">Major</a>
+      <a href="#">Example</a>
+      <a href="https://www.jbnu.ac.kr" target="_blank">JBNU</a>
+    </nav>
+  </header>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th colspan="3" style="font-size: 1.8rem; padding: 24px 0;">Welcome to my homepage</th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <td>사진</td>
+          <td>소개</td>
+          <td>노래</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img src="/assign/pic/icon.png" alt="temp" /></td>
+          <td style="text-align: center;">
+            안녕하세요! 저는 웹 개발을 사랑하는 봉입니다.<br/>
+            이 페이지는 저를 소개하고, 제가 좋아하는 노래나 콘텐츠를 공유하는 공간입니다.<br/><br/>
+            천천히 둘러보고 즐겨주세요!
+          </td>
+          <td style="text-align: right;">
+            내가 그녀를 찾았을 때<br/>
+            그녀는 나를 보지 않죠<br/>
+            그렇게 멀리 있던 그녀를<br/>
+            난 또 보내야 했죠<br/><br/>
+      
+            다시는 사랑 따윈 없을 거라<br/>
+            다짐했던 날 잊었나요<br/>
+            제발 다시 돌아와요<br/>
+            나를 안아줘요<br/><br/>
+      
+            ▶️ <a href="https://www.youtube.com/watch?v=XXXXX" target="_blank">[유튜브에서 듣기 - 더네임]</a>
+          </td>
+        </tr>
+      
+        <!-- ✨ 추가된 줄 -->
+        <tr style="background-color: #1a1a1a; color: #fff; font-weight: 600;">
+          <td colspan="1">장소</td>
+          <td colspan="1">위치</td>
+          <td colspan="1">추억</td>
+        </tr>
+        <tr>
+          <td>서울역</td>
+          <td>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.0195481617197!2d126.96907207533923!3d37.554603224813114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca3e3564c132f%3A0xe51f94b3ae4bff12!2sSeoul%20Station!5e0!3m2!1sen!2skr!4v1746210375362!5m2!1sen!2skr" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+          
+          </td>
+          <td>
+            친구들과 웃으며 마지막 기차를 탔던 날,<br/>
+            잊지 못할 소중한 기억이에요.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    Copyright All Rights Reserved bong
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
