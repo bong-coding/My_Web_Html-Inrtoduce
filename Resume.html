@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume Hae-won Jeon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f7f9;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    .container {
+      display: flex;
+      width: 100%;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+  width: 300px;
+  background-color: #014737;
+  color: white;
+  padding: 30px 20px;
+  border-radius: 0; /* <-- 모서리 둥글기 없앰 */
+  position: sticky;
+  top: 10px;
+  min-height: 100vh; /* <-- 화면 전체 세로 높이 채움 */
+  align-self: flex-start;
+  z-index: 10;
+}
+
+.sidebar img {
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 0; /* <-- 이미지 둥글기 제거해서 하단 흰 여백 제거 */
+}
+
+    .sidebar h2 {
+      font-size: 1.8rem;
+      margin: 10px 0 5px;
+    }
+
+    .sidebar p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #ddd;
+    }
+
+    .sidebar .contact i {
+      margin-right: 8px;
+      color: #fdd835;
+    }
+
+    .sidebar .contact p {
+      margin-bottom: 10px;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 60px 40px 40px 40px;
+      background-color: white;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h3 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px; /* 행 간 간격 */
+  margin-top: 10px;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+td {
+  background-color: #f9f9f9;
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+tr:hover td {
+  background-color: #e6f0ff;
+  transition: background-color 0.2s ease;
+}
+
+tr td:first-child {
+  border-left: 4px solid #007bff;
+  border-radius: 10px 0 0 10px;
+}
+
+tr td:last-child {
+  border-radius: 0 10px 10px 0;
+}
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-radius: 0;
+      }
+
+      .content {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Resume Hae-won Jeon</h1>
+    <nav>
+      <a href="./index.html">Main</a>
+      <a href="./Resume.html">Resume</a>
+      <a href="./Story.html">Story</a>
+      <a href="#">Bucket</a>
+      <a href="#">Album</a>
+      <a href="#">Major</a>
+      <a href="#">Poster</a>
+      <a href="#">JBNU</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <img src="./pic/icon.png" alt="전해원 프로필 사진" />
+      <h2>전해원</h2>
+      <p>Hae-won Jeon</p>
+      <div class="contact">
+        <p><i class="fas fa-phone"></i> +123-456-7890</p>
+        <p><i class="fas fa-envelope"></i> hello@reallygreatsite.com</p>
+        <p><i class="fas fa-home"></i> 123 Anywhere St. Any City, ST 12345</p>
+      </div>
+    </aside>
+
+    <main class="content">
+      <section class="section">
+        <h3>경력</h3>
+        <table>
+          <tr><th>회사명</th><th>기간</th><th>내용</th><th>깃허브 주소소</th></tr>
+          <tr>
+            <td><strong>Saflord & Co.</strong></td>
+            <td>2021년 – 2023년</td>
+            <td>해외 바이어 대상 구매 요청 대응 및 해외공장과의 교신, 발주 및 납기 관리 업무 수행</td>
+            <td><a href="https://www.naver.com">대충 주소소</a></td>
+          </tr>
+          <tr>
+            <td><strong>Liceria & Co.</strong></td>
+            <td>2019년 – 2021년</td>
+            <td>국내외 전자부품 구매 및 입출고 관리, 재고 회전율 20% 향상 기여</td>
+            <td><a href="https://www.naver.com">대충 주소소</a></td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="section">
+        <h3>학력</h3>
+        <table>
+          <tr><th>학교명</th><th>재학기간</th><th>전공 및 내용</th></tr>
+          <tr>
+            <td><strong>Bancelle University</strong></td>
+            <td>2014.03 – 2018.02</td>
+            <td>경영학과 졸업</td>
+          </tr>
+          <tr>
+            <td><strong>Bancelle High School</strong></td>
+            <td>2011.03 – 2014.02</td>
+            <td>졸업 (이과)</td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="section">
+        <h3>자격증</h3>
+        <table>
+          <tr><th>자격증명</th><th>취득년도</th><th>발급기관</th></tr>
+          <tr>
+            <td>무역영어 1급</td>
+            <td>2022</td>
+            <td>대한상공회의소</td>
+          </tr>
+          <tr>
+            <td>TOEIC 890점</td>
+            <td>2021</td>
+            <td>ETS</td>
+          </tr>
+          <tr>
+            <td>정보처리기사</td>
+            <td>2020</td>
+            <td>한국산업인력공단</td>
+          </tr>
+          <tr>
+            <td>네트워크관리사 2급</td>
+            <td>2019</td>
+            <td>한국정보통신자격협회</td>
+          </tr>
+          <tr>
+            <td>운전면허 2종 보통</td>
+            <td>2017</td>
+            <td>도로교통공단</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
