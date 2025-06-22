@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+table, tr, td{
+            border: 0px solid black;
+            border-collapse: collapse;
+            border-spacing: 5px;
+            border-radius: 20px;
+        }
+tr{
+            background-color: burlywood;
+            transition: 0.3s linear;
+        }
+tr:nth-child(odd){
+            background-color: #7b1fa2 ;
+        }
+tr:nth-child(even){
+            background-color: #388e3c  ;
+        }
+tr:hover{
+            background-color: greenyellow;
+            transform: scale(1.03);
+        }
+td{
+            text-align: center;
+            padding: 20px 20px;
+        }
+img{
+            width: 90%;
+            height: 250px;
+            border-radius: 20px;
+            box-shadow: 2px 3px 5px gray;
+        }
+tr.blank{
+            background-color: white;
+        }
+    </style>
+    <style>
+@font-face {
+        font-family: 'TAEBAEKfont';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2310@1.0/TAEBAEKfont.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+h1,h2{
+            font-family: 'TAEBAEKfont';
+        }
+
+@font-face {
+            font-family: 'GangwonEdu_OTFBoldA';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+  @font-face {
+    font-family: 'q1';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2412-1@1.0/Ownglyph_corncorn-Rg.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+        
+p{
+            font-family: 'q1';
+        }
+
+@font-face {
+        font-family: 'RiaSans-ExtraBold';
+        src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2410-1@1.0/RiaSans-ExtraBold.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+        }
+
+span.one{
+            font-family: 'RiaSans-ExtraBold';
+        }
+a {text-decoration: none;}
+            nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+   .ii a {
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.ii a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+.ii a:hover {
+  color: #0056b3;
+}
+
+.ii a:hover::after {
+  width: 100%;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUCKETLIST</title>
+    <script src="https://kit.fontawesome.com/67f2ab506c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">Intro</a>
+      <a href="./main.html">Main</a>
+      <a href="./Resume.html">Resume</a>
+      <a href="./Story.html">Story</a>
+      <a href="./bucket.html">Bucket</a>
+      <a href="./Album.html">Album</a>
+      <a href="./Major.html">Major</a>
+      <a href="./Poster.html">Poster</a>
+      <a href="https://www.jbnu.ac.kr" target="_blank">JBNU</a>
+    </nav>
+  </header>
+    <center>
+    <h1 id="top">B U C K E T - L I S T</h1>
+    <center>
+  <p class="ii">
+        <a href="./main.html"> <i class="fa-solid fa-house"></i></i></a>/
+      <a href="./Resume.html"> <i class="fa-solid fa-file"></i></a> /
+      <a href="./Story.html"> <i class="fa-solid fa-store"></i></a> /
+      <a href="./bucket.html"> <i class="fa-solid fa-bucket"></i></a> /
+      <a href="./Album.html"> <i class="fa-solid fa-images"></i></a> /
+      <a href="./Major.html"> <i class="fa-solid fa-computer"></i></a> /
+      <a href="./Poster.html"> <i class="fa-solid fa-blog"></i></a>/
+      <a href="https://www.jbnu.ac.kr" target="_blank">Jbnu</a>
+      </p>
+</center>
+ <table width="80%">
+        <tr class="blank">
+            <td width="35%"></td>
+            <td width="30%"></td>
+            <td width="35%"></td>
+        </tr>
+        <tr>
+            <td><img src="./pic/sky.png" alt="스카이 다이빙 이미지"></td>
+            <td colspan="2">
+              <h2>BUCKET #1 :  스카이다이빙</h2>
+              <P>
+                하늘에서 자유롭게 몸을 던지는 극한의 순간.
+                단 몇 초간의 낙하지만, <mark>평생 잊지 못할 용기의 기억이 되는 것 같습니다.</mark>
+                평소 겁이 많은 나지만, 하늘을 향해 뛰어내리는 순간만큼은 모든 두려움과 얽매임에서 벗어나 ‘진짜 자유’를 
+                느낄 수 있기 때문에 자주 하고 싶습니다.
+              </P>
+              <h3 style="color: violet;">#자유비행 #극한체험</h3>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2">
+              <h2>BUCKET #2 : 패러글라이딩</h2>
+              <P>
+                바람을 타고 천천히 하늘을 유영하듯 날아다니는 경험.
+                <mark>높은 곳에서 세상을 내려다보며,</mark> 내 인생을 돌아볼 수 있을 것 같아요.
+                스카이다이빙이 짜릿한 순간의 해방이라면, 패러글라이딩은 여유 속에 풍경을 즐기는 경험. 그런 하늘에서의 산책을
+                해보고 싶습니다.    
+              </P>
+              <h3 style="color: violet;">#하늘산책 #힐링바람</h3>
+            </td>
+            <td><img src="./pic/pg.png" alt="패러글라이딩 이미지"></td>
+        </tr>
+        <tr>
+            <td><img src="./pic/sea.png" alt="해양 스쿠버 이미지"></td>
+            <td colspan="2">
+              <h2>BUCKET #3 : 해양 스쿠버다이빙</h2>
+              <P>
+                바닷속 푸른 세상은, 마치 지구 속 또 다른 행성 처럼 느껴지고,
+                <mark>수면 아래의 조용한 세계를 직접 보고, 물속에서 호흡하며 살아있는 자연을 느껴보고 싶습니다.</mark>
+                물고기들과 함께 숨 쉬며 잠시 일상을 잊고 싶고 자연의 아름다움을 느껴보고 싶어 꼭 해보고 싶습니다.
+              </P>
+              <h3 style="color: violet;">#바다탐험 #숨막히는경험</h3>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2">
+              <h2>BUCKET #4 : 오로라 보기 (노르웨이, 아이슬란드)</h2>
+              <P>
+                영화나 사진으로만 보던 오로라. 그 신비로운 춤을 직접 눈으로 보고, 가슴에 담고 싶습니다.
+                <mark>추운 밤하늘을 올려다보며, 세상에 이런 아름다움이 있다는 걸 온몸으로 느껴보고 싶습니다.</mark>
+              </P>
+              <h3 style="color: violet;">#자연의기적 #북유럽로망</h3>
+            </td>
+            <td><img src="./pic/rora.png" alt="오로라 이미지"></td>
+        </tr>
+        <tr>
+            <td><img src="./pic/world.png" alt="세계 일주 이미지"></td>
+            <td colspan="2">
+              <h2>BUCKET #5 : 세계 일주</h2>
+              <P>
+                각 나라의 공기, 언어, 사람, 음식, 문화를 직접 경험하고 싶습니다.
+                <mark>학교나 뉴스로 배운 세상이 아닌, 내가 두 발로 걸으며 직접 느낀 세계를 알고 싶습니다.</mark>
+                낯선 곳에서의 경험은 결국 나를 더 단단하게 만들 거라 믿습니다.
+              </P>
+              <h3 style="color: violet;">#세계탐험 #인생여행</h3>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2">
+              <h2>BUCKET #6 :  유럽 기차 여행 </h2>
+              <P>
+                빠르게만 사는 일상과 다르게, 기차는 천천히 나아갑니다.
+                <mark>기차 창밖으로 스쳐 지나가는 유럽의 도시와 시골 풍경을 보며 여유와 낭만을 느껴보고 싶습니다.</mark>
+                낯선 나라에서 느긋하게, 나만의 여행 노트를 만들어가는 상상을 합니다.
+                기차 여행을 하면서 외국인이랑 친해지고 많은 문화 경험을 해보고 싶습니다.
+              </P>
+              <h3 style="color: violet;">#감성기차여행 #유럽풍경</h3>
+            </td>
+            <td><img src="./pic/europe.png" alt="유럽 기차 여행 이미지"></td>
+        </tr>
+        <tr>
+            <td><img src="./pic/spring.png" alt="일본 벚꽃 여행"></td>
+            <td colspan="2">
+              <h2>BUCKET #7 : 일본 벚꽃 시즌 여행 </h2>
+              <P>
+               짧지만 강렬하게 피어나는 벚꽃처럼, <mark>순간의 아름다움을 온전히 느껴보고 싶습니다.</mark>
+              잔잔한 바람, 흐드러진 벚꽃, 그리고 그 아래를 걷는 나…
+              <mark>그 한 장면을 위해 떠나고 싶습니다.</mark>
+              </P>
+              <h3 style="color: violet;">#사쿠라여행 #봄감성</h3>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2">
+              <h2>BUCKET #8  : 핑크 호수 방문</h2>
+              <P>
+                호수라고는 믿기지 않을 정도로 신비한 색감을 가진, 세상에 단 하나뿐인 장소.
+                <mark>현실에서 벗어나 동화 속에 들어간 기분을 느껴보고 싶습니다.</mark>
+                사진으로만 봐왔던 ‘비현실적인 풍경’을 진짜 내 눈으로 보고, 느끼고, 기록하고 싶습니다.
+              </P>
+              <h3 style="color: violet;">#미지의자연 #인생사진</h3>
+            </td>
+            <td><img src="./pic/pink.png" alt="핑크 호수 이미지"></td>
+        </tr>
+        <tr>
+            <td><img src="./pic/myselfbook.png" alt="자서전 이미지"></td>
+            <td colspan="2">
+              <h2>BUCKET #9  : 자서전 쓰기</h2>
+              <P>
+                작든 크든, 나만의 이야기를 세상에 남기고 싶습니다.
+                <mark>지금까지의 삶을 정리하며 나를 돌아보고, 누군가에게 작은 영감이 될 수 있다면 더 의미 있는 일이 될 수 있을 것 같습니다.</mark>
+                실패와 고민까지 솔직하게 담아, 나를 위한 책 한 권을 꼭 써보고 싶습니다.
+              </P>
+              <h3 style="color: violet;">#나의이야기 #삶의기록</h3>
+            </td>
+        </tr>
+         <tr>
+            <td colspan="2">
+              <h2>BUCKET #10  : 내집마련  </h2>
+              <P>
+                어릴 적엔 그냥 지붕 있는 집이 전부라고 생각했지만,
+                이젠 나만의 공간을 갖고 싶다는 <mark>간절한 바람</mark>이 생겼습니다.
+                <br>
+                <mark>남의 공간에 기대어 살아가는 게 아닌, 내가 선택하고 꾸민 집</mark>
+                작더라도, 내가 좋아하는 향이 나고, 나다운 색으로 채워진 곳
+                <mark>힘들었던 하루를 끝내고 돌아와 마음 편히 쉴 수 있는 안식처</mark>
+                <br>
+                누군가는 그저 부동산이라 말할지 몰라도,
+                <mark>내게 집이란, 삶을 살아갈 이유이자 원동력</mark>입니다.
+              </P>
+              <h3 style="color: violet;">#내공간 #삶의안정</h3>
+            </td>
+            <td><img src="./pic/home.png" alt="내집마련 이미지"></td>
+        </tr>
+    </table>
+    <a href="#top">위로 이동</a><br>
+</body>
+</html>

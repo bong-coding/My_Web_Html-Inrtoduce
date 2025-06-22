@@ -1,0 +1,112 @@
+
+<html>
+  <head>
+    <title>Major</title>
+<style>
+    #wrapper{
+        width:600px;
+        margin:0 auto;  
+    }
+    body{
+      background-color: powderblue;
+    }
+    p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.intro-box {
+  width: 80%;
+  margin: 30px auto;
+  padding: 20px;
+  border: 2px solid #888;
+  background-color: olivedrab;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1); 
+}
+
+.ii a {
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.ii a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+.ii a:hover {
+  color: #0056b3;
+}
+
+.ii a:hover::after {
+  width: 100%;
+}
+
+
+</style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        $(".slider").bxSlider({
+            auto:true,
+            adaptiveHeight:true,
+           autoControls:true,
+           randomStart:true,
+           captions:true,
+           speed:500
+        });
+      });
+    </script>
+<script src="https://kit.fontawesome.com/1f7c022def.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <center>
+    <h1> 나의 전공</h1>
+    <p class="ii">
+      <a href="./main.html"> <i class="fa-solid fa-house"></i></i></a>/
+      <a href="./Resume.html"> <i class="fa-solid fa-file"></i></a> /
+      <a href="./Story.html"> <i class="fa-solid fa-store"></i></a> /
+      <a href="./bucket.html"> <i class="fa-solid fa-bucket"></i></a> /
+      <a href="./Album.html"> <i class="fa-solid fa-images"></i></a> /
+      <a href="./Major.html"> <i class="fa-solid fa-computer"></i></a> /
+      <a href="./Poster.html"> <i class="fa-solid fa-blog"></i></a>/
+      <a href="https://www.jbnu.ac.kr" target="_blank">Jbnu</a>
+      </p>
+<div id="wrapper">
+    <div class="slider">
+      <div><img src="./pic/com1.png" alt="" title=""></div>
+      <div><img src="./pic/com2.png"  alt="" title=" "></div>
+      <div><img src="./pic/com3.png"  alt="" title=""></div>
+      <div><img src="./pic/com4.png" alt="" title=" "></div>
+    </div>
+</div>
+<a href="https://csai.jbnu.ac.kr/csai/index.do" target="_blank">
+  <i class="fa-solid fa-utensils"></i> 컴퓨터인공지능학부 홈페이지
+</a> 
+
+<p class="intro-box">컴퓨터인공지능학부는 디지털 전환 시대 및 4차산업혁명 시대를 선도할 인재를 양성하기 위해, 
+    컴퓨터과학 세계 표준 교육과정 및 산업체 수요를 적극 반영하여, 9대 핵심역량인 5C-GIANT를 정의하였으며, 
+    이를 기반으로 AI, IoT, 클라우드/빅데이터, 블록체인/정보보호의 심화전공으로 하고 산학실전캡스톤 프로그램을 다수 운영하는 교과과정을 새롭게 수립하였습니다.
+     우리 학부는 AI 및 신기술 요구에 적극 대응하면서 미래 지능정보사회 및 초연결 사회에 종사할 학생들에게 요구되는 지식을 체계적이고 효율적으로 교육하기 위하여
+      교육 목표를 "미래기술지향적으로 문제해결역량을 갖춘 산업체 수요 기반 5C-GIANT형 글로벌 디지털 인재 양성 "에 두고 있습니다.</p>
+</center>
+  </body>
+</html>

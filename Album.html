@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bucket List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #f5f5f5; color: #333; }
+
+  
+     header {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #0056b3;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+   
+.page-title { text-align: center; margin: 2rem 0 1rem;
+      font-size: 2rem; font-weight: 600; }
+.page-sub { text-align: center; color: #666; margin-bottom: 2rem; }
+
+  
+.bucket-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 0 2rem 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+ 
+.card { background: #fff; border-radius: 12px;
+      overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+      display: flex; flex-direction: column;
+      transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+.card:hover { 
+      transform: translateY(-5px) scale(1.04);
+      background-color: #eef4ff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    }
+
+.card img { width: 100%; height: 240px; object-fit: cover; }
+.card-content { padding: 1.5rem; flex: 1; display: flex;
+      flex-direction: column; justify-content: space-between; }
+.card-content h2 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #1e293b; }
+.card-content p { line-height: 1.6; color: #4b5563; flex: 1; }
+
+  
+.highlight { display: inline-block;
+      background: rgba(60,141,188,0.1); color: #3c8dbc;
+      padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 500;
+    }
+
+   
+@media (max-width: 900px) {
+      .bucket-container { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    }
+@media (max-width: 600px) {
+      .page-title { font-size: 1.75rem; }
+      .card img { height: 180px; }
+    }
+
+    .ii a {
+  color: #007bff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  position: relative;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.ii a::after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #0056b3;
+  transition: width 0.3s ease;
+}
+
+.ii a:hover {
+  color: #0056b3;
+}
+
+.ii a:hover::after {
+  width: 100%;
+}
+  </style>
+  <script
+      src="https://kit.fontawesome.com/05db55c7c1.js"
+      crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./index.html">Intro</a>
+      <a href="./main.html">Main</a>
+      <a href="./Resume.html">Resume</a>
+      <a href="./Story.html">Story</a>
+      <a href="./bucket.html">Bucket</a>
+      <a href="./Album.html">Album</a>
+      <a href="./Major.html">Major</a>
+      <a href="./Poster.html">Poster</a>
+      <a href="https://www.jbnu.ac.kr" target="_blank">JBNU</a>
+    </nav>
+  </header>
+  <center>
+  <p class="ii">
+      <a href="./main.html"> <i class="fa-solid fa-house"></i></i></a>/
+      <a href="./Resume.html"> <i class="fa-solid fa-file"></i></a> /
+      <a href="./Story.html"> <i class="fa-solid fa-store"></i></a> /
+      <a href="./bucket.html"> <i class="fa-solid fa-bucket"></i></a> /
+      <a href="./Album.html"> <i class="fa-solid fa-images"></i></a> /
+      <a href="./Major.html"> <i class="fa-solid fa-computer"></i></a> /
+      <a href="./Poster.html"> <i class="fa-solid fa-blog"></i></a>/
+      <a href="https://www.jbnu.ac.kr" target="_blank">Jbnu</a>
+      </p>
+</center>
+  <h2 class="page-title">Album</h2>
+  <p class="page-sub">나의 추억들이 담긴 곳에서</p>
+
+  <div class="bucket-container">
+    <div class="card">
+      <img src="./pic/tower.jpg" alt="후쿠오카 " />
+      <div class="card-content">
+        <h2>Memory #1 : 후쿠오카 타워</h2>
+        <p>차가운 겨울바람을 맞으며 찾았던 후쿠오카<br /><span class="highlight">유후인 기찻길이 제일 기억에 남는다.</span> 가장 재밌었던 것은 길거리 먹방</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a1.jpg" alt="일본" />
+      <div class="card-content">
+        <h2>Memory #2 : 도쿄</h2>
+        <p>이색적인 경험 많은 등불들이 날라가고 소원을 비는게 신기했다<br>
+        <span class="highlight">여러개의 분홍빛 등불들이 밤하늘과 잘 어울렸다</span> </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a7.jpg" alt="화산" />
+      <div class="card-content">
+        <h2>Memory #3 : 활화산</h2>
+        <p>실제로 활동 중인 화산을 본 건 처음이라 신기했고, 동시에 약간의 긴장감도 들었다<br>
+          <span class="highlight">자연의 힘이 얼마나 거대한지 실감할 수 있는 경험이었다</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a4.jpg" alt="겨울바다 " />
+      <div class="card-content">
+        <h2>Memory #4 : 겨울바다</h2>
+        <p>겨울바다라 그런지 사람이 거의 없었다<br>
+        바람이 세고 차가웠지만, 바다 풍경은 맑고 깨끗했다<br>
+        한적해서 조용히 걷기 좋았고, 생각 정리하기에 좋은 장소였다<br>
+      <span class="highlight">모래알이 정말 부드러웠던게 기억에 남는다</span>
+    </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a9.jpg" alt="튀르키예" />
+      <div class="card-content">
+        <h2>Memory #5 : 이스탄불 모스크</h2>
+        <p>규모가 예상보다 훨씬 컸고, 건축 양식이 독특했다<br>
+          내부는 조용하고 엄숙한 분위기였고, 관광객보다 기도하러 온 현지인들이 인상 깊었다<br>
+          종교적 의미를 넘어, 문화와 역사에 대한 이해가 조금 더 깊어지는 경험이었다
+        <span class="highlight">야경이 정말 이뻤다
+        </span></p>
+      </div>
+    </div>
+
+     <div class="card">
+      <img src="./pic/a10.jpg" alt="수영정" />
+      <div class="card-content">
+        <h2>Memory #6 : 하기아 소피아 맨션 수영장</h2>
+        <p>술탄아흐메트 중심에 위치한 힐튼 큐리오 컬렉션 호텔의 지하 수영장<br>
+        오스만 시대 건축 양식을 그대로 살린 석조 천장과 기둥이 인상 깊었다<br>
+        <span class="highlight">역사적인 공간 안에서 수영을 할 수 있다는 점이 신기했다</span></p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a13.jpg" alt="제주도" />
+      <div class="card-content">
+        <h2>Memory #7 : 무지개 해안도로</h2>
+        <p>진짜 엄청 추운데 사진 찍을려고 줄 서있던 기억이 있다</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/a3.jpg" alt="강아지" />
+      <div class="card-content">
+        <h2>Memory #8 : 구름이</h2>
+        <p>박스안에 들어가서 저런 표정을 하고 있는게 너무 귀엽다
+          <span class="highlight">다시봐도  표정이 너무 웃기다</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/lot.jpg" alt="롯데타워" />
+      <div class="card-content">
+        <h2>Memory #9 : 롯데타워</h2>
+        <p>롯데타워에서 내려다 봤을 때다
+          <span class="highlight">뭔가 빌라만 가득보여서 그닥 이쁘진 않은 것 같다
+          </span>
+        </p>
+      </div>
+    </div>
+    
+    <div class="card">
+      <img src="./pic/gang.jpg" alt="강릉" />
+      <div class="card-content">
+        <h2>Memory #10 : 바다낚시</h2>
+        <p>처음으로 친구들이랑 저녁에 바다낚시 하러 갔을 때다
+          이때가 정말 재밌었는데 그립다
+          <span class="highlight">물고기는 한마리도 못잡고 꽃게만 잡은게 기억이 난다
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/sk.jpg" alt="스키" />
+      <div class="card-content">
+        <h2>Memory #11 : 스키</h2>
+        <p>저녁에 스키 타러 갔는데 사람이 거의 없었던게 생각이난다<br>
+          바로바로 스키탈 수 있어서 정말 좋았는데
+          <span class="highlight">고급코스에서 타나가 넘어져서 엉덩이에 멍든게 생각이난다
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./pic/no.jpg" alt="제주" />
+      <div class="card-content">
+        <h2>Memory #12 : 노형수퍼마켙</h2>
+        <p>이름만 수퍼마켙이지 실제로는 대형 미디어 테마파크다<br>
+          레트로 감성도 있고 다양하다 내가 사진찍은곳 이름이 기억이 잘 안나네...<br>
+          <span class="highlight">생각보다 사진 찍을 수 있는곳이 엄청 많은 곳이다
+          </span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
